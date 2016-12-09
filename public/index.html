@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
-
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <title>Scrapey the Local Papey</title>
-
+  <title>SCRAPER</title>
+  <style>
+    body{
+      background-color: none;
+    }
+    #wrapper{
+      width:960px;
+      margin: 0 auto;
+    }
+    #articles{
+      width:60%;
+      height:700px;
+      display:inline-block;
+      overflow: auto;
+    }
+    #notes{
+      width:30%;
+      float:right;
+    }
+    textarea, input{
+      display:block;
+      width:100%;
+      border-style:solid;
+      border-color:white;
+      border-width: 3px;
+    }
+    input{
+      height:36px;
+      font-size: 24px;
+      background-color:blue;
+      color:white;
+      font-weight:bold;
+      margin-bottom:20px;
+      width:100%;
+    }
+    textarea{
+      height:200px;
+      font-size: 18px;
+      font-weight:bold;
+      background-size: 100%;
+      background-repeat:no-repeat;
+      color:white; 
+      width:100%;
+    }
+   h2, p {
+      color:red;
+      font-size: 20px;
+    }
+   h1{
+      font-family: 'Yanone Kaffeesatz', bold;
+      font-size: 75px;
+      color: red;
+      margin: 5px;
+    }
+    #savenote {
+      margin-top:20px;
+    }
+  </style>
 </head>
-<body>
-
 <body background="asbury.jpg" style="background-size:100%">
-<br/>
-<br/>
-<br/>
-  <div class='container'>
-    <div class='card-panel grey lighten-3 col s12'>
-      <section class='center-align'>
-      <img src="scraping5.jpeg" alt="paper" height="20%" width="20%">
-      <h1>Scrapey the Local Papey</h1>
-      <h2><i></i></h2>
-      <!--<a href='/survey' class="waves-effect waves-light btn black lighten-1"><i class="material-icons left">comment</i>n</a>-->
-      </section>
+  <div id="wrapper">
+    <h1>SCRAPee the LOCAL PAPee</h1>
+    <h2><i></i></h2>
     <div id="articles"></div>
     <div id="notes"></div>
   </div>

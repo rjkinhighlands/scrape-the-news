@@ -20,8 +20,7 @@ app.use(express.static('public'));
 
 // CONFIQ MONGOOSE DB //
 
-var dbName = "AppScraper"
-mongoose.connect('mongodb://localhost/'+ dbName);
+mongoose.connect('mongodb://localhost/week18hw');
 var db = mongoose.connection;
 
 db.on('error', function(err) {
@@ -49,7 +48,7 @@ app.get('/scrape', function(req, res) {
 
   request('http://www.app.com/', function(error, response, html) {
     var $ = cheerio.load(html);
-    $('a class').each(function(i, element) {
+    $('li data-content-id').each(function(i, element) {
 
     			// RESULTS EMPTY //
 
